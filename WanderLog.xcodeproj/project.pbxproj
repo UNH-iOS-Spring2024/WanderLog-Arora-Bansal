@@ -11,6 +11,12 @@
 		29B076672B868025007E9BB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B076662B868025007E9BB0 /* ContentView.swift */; };
 		29B076692B868026007E9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29B076682B868026007E9BB0 /* Assets.xcassets */; };
 		29B0766C2B868026007E9BB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29B0766B2B868026007E9BB0 /* Preview Assets.xcassets */; };
+		6E3238AE2B9FD24D00C4B737 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238AD2B9FD24C00C4B737 /* AddEmailView.swift */; };
+		6E3238B02B9FD2E700C4B737 /* CreateUsername.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238AF2B9FD2E700C4B737 /* CreateUsername.swift */; };
+		6E3238B22B9FD30D00C4B737 /* CreateInitialBucketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238B12B9FD30D00C4B737 /* CreateInitialBucketList.swift */; };
+		6E3238B42B9FD32D00C4B737 /* CompleteSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238B32B9FD32D00C4B737 /* CompleteSignUp.swift */; };
+		6E3238B92B9FD37D00C4B737 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238B82B9FD37D00C4B737 /* AuthService.swift */; };
+		6E3238BC2B9FD3D000C4B737 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3238BB2B9FD3D000C4B737 /* RegistrationView.swift */; };
 		6EB110D72B8D0950005ED8D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB110D62B8D0950005ED8D5 /* LoginView.swift */; };
 		6EB110DB2B8D0D7A005ED8D5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6EB110DA2B8D0D79005ED8D5 /* FirebaseAnalytics */; };
 		6EB110DD2B8D0D7A005ED8D5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 6EB110DC2B8D0D7A005ED8D5 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -25,6 +31,12 @@
 		29B076662B868025007E9BB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29B076682B868026007E9BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29B0766B2B868026007E9BB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E3238AD2B9FD24C00C4B737 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		6E3238AF2B9FD2E700C4B737 /* CreateUsername.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsername.swift; sourceTree = "<group>"; };
+		6E3238B12B9FD30D00C4B737 /* CreateInitialBucketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInitialBucketList.swift; sourceTree = "<group>"; };
+		6E3238B32B9FD32D00C4B737 /* CompleteSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUp.swift; sourceTree = "<group>"; };
+		6E3238B82B9FD37D00C4B737 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		6E3238BB2B9FD3D000C4B737 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		6EB110D62B8D0950005ED8D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +76,8 @@
 		29B076632B868025007E9BB0 /* WanderLog */ = {
 			isa = PBXGroup;
 			children = (
+				6E3238BA2B9FD3AC00C4B737 /* ViewModel */,
+				6E3238B72B9FD36800C4B737 /* Service */,
 				29B076642B868025007E9BB0 /* WanderLogApp.swift */,
 				29B076662B868025007E9BB0 /* ContentView.swift */,
 				29B076682B868026007E9BB0 /* Assets.xcassets */,
@@ -81,10 +95,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6E3238B72B9FD36800C4B737 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6E3238B82B9FD37D00C4B737 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6E3238BA2B9FD3AC00C4B737 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6E3238BB2B9FD3D000C4B737 /* RegistrationView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6EB110D82B8D0959005ED8D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				6EB110D62B8D0950005ED8D5 /* LoginView.swift */,
+				6E3238AD2B9FD24C00C4B737 /* AddEmailView.swift */,
+				6E3238AF2B9FD2E700C4B737 /* CreateUsername.swift */,
+				6E3238B12B9FD30D00C4B737 /* CreateInitialBucketList.swift */,
+				6E3238B32B9FD32D00C4B737 /* CompleteSignUp.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,9 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3238B42B9FD32D00C4B737 /* CompleteSignUp.swift in Sources */,
+				6E3238B02B9FD2E700C4B737 /* CreateUsername.swift in Sources */,
 				6EB110D72B8D0950005ED8D5 /* LoginView.swift in Sources */,
+				6E3238BC2B9FD3D000C4B737 /* RegistrationView.swift in Sources */,
+				6E3238AE2B9FD24D00C4B737 /* AddEmailView.swift in Sources */,
 				29B076672B868025007E9BB0 /* ContentView.swift in Sources */,
+				6E3238B22B9FD30D00C4B737 /* CreateInitialBucketList.swift in Sources */,
 				29B076652B868025007E9BB0 /* WanderLogApp.swift in Sources */,
+				6E3238B92B9FD37D00C4B737 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
