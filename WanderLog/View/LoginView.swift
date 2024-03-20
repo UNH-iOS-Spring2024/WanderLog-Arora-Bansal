@@ -14,10 +14,7 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Spacer()
-                
-                //logo image
-                Image("front-logo-dark")
+                Image("full-white")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 400,height: 220)
@@ -68,7 +65,6 @@ struct LoginView: View {
                     Rectangle()
                         .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
                 }
-                .foregroundColor(.gray)
                 
                 HStack {
                     Image("apple")
@@ -82,9 +78,7 @@ struct LoginView: View {
                 }
                 .padding(.top, 8)
                 
-                Spacer()
                 
-                Divider()
                 
                 NavigationLink {
                     AddEmailView()
