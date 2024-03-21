@@ -1,5 +1,5 @@
 //
-//  LoginView2.swift
+//  LoginView.swift
 //  WanderLog
 //
 //  Created by Tanushree Arora on 3/20/24.
