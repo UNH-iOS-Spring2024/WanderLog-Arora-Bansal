@@ -49,11 +49,43 @@ struct LoginView: View {
             .padding(.vertical)
             .cornerRadius(5)
             .disabled(username.isEmpty || password.isEmpty)
-
+            
+            
+            VStack {
+                HStack {
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.gray)
+                        .padding(0)
+                            
+                            Text("OR")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                                .padding(.horizontal, 10)
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.gray)
+                        .padding(0)
+                
+                }
+            }
+            
+            Button {
+                // Handle sign in with Apple
+            } label: {
+                Image(systemName: "applelogo")
+                Text("Continue with Apple")
+            }
+            .padding()
+            .foregroundColor(.black)
+            
             Spacer()
+                    
+
         }
         .padding()
         
+     
         
     }
     
