@@ -25,6 +25,7 @@
 		6E7C98F72BABEE1D0031051D /* FilledButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C98F62BABEE1D0031051D /* FilledButtonStyleView.swift */; };
 		6E7C98F92BAC0A750031051D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C98F82BAC0A750031051D /* LoginView.swift */; };
 		6EDF69562BAC6CF300CA6C0F /* SignUpview1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */; };
+		6EDF69582BAD073500CA6C0F /* InitialBucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		6E7C98F62BABEE1D0031051D /* FilledButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonStyleView.swift; sourceTree = "<group>"; };
 		6E7C98F82BAC0A750031051D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpview1.swift; sourceTree = "<group>"; };
+		6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialBucketListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				6E3CBE232BABA48C00DE04E9 /* LogoView.swift */,
 				6E7C98F62BABEE1D0031051D /* FilledButtonStyleView.swift */,
 				6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */,
+				6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDF69582BAD073500CA6C0F /* InitialBucketListView.swift in Sources */,
 				291B2AE22B93D4100093DD5E /* BucketListView.swift in Sources */,
 				291B2ADE2B93D3570093DD5E /* HomeView.swift in Sources */,
 				291B2AD42B911E830093DD5E /* ProfileView.swift in Sources */,
