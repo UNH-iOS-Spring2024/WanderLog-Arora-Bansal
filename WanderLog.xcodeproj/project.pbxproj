@@ -26,6 +26,7 @@
 		6E7C98F92BAC0A750031051D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C98F82BAC0A750031051D /* LoginView.swift */; };
 		6EDF69562BAC6CF300CA6C0F /* SignUpview1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */; };
 		6EDF69582BAD073500CA6C0F /* InitialBucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */; };
+		6EDF695A2BAE032600CA6C0F /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF69592BAE032600CA6C0F /* HomePageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		6E7C98F82BAC0A750031051D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpview1.swift; sourceTree = "<group>"; };
 		6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialBucketListView.swift; sourceTree = "<group>"; };
+		6EDF69592BAE032600CA6C0F /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				6E7C98F62BABEE1D0031051D /* FilledButtonStyleView.swift */,
 				6EDF69552BAC6CF300CA6C0F /* SignUpview1.swift */,
 				6EDF69572BAD073500CA6C0F /* InitialBucketListView.swift */,
+				6EDF69592BAE032600CA6C0F /* HomePageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				291B2ADA2B91501C0093DD5E /* ProfileMapView.swift in Sources */,
 				6E7C98F72BABEE1D0031051D /* FilledButtonStyleView.swift in Sources */,
 				6EDF69562BAC6CF300CA6C0F /* SignUpview1.swift in Sources */,
+				6EDF695A2BAE032600CA6C0F /* HomePageView.swift in Sources */,
 				29B076652B868025007E9BB0 /* WanderLogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
