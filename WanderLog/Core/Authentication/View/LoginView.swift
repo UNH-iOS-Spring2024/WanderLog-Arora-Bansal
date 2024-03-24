@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @StateObject var viewModel = LoginViewModel()
 
     var body: some View {
         VStack {
             Spacer()
             LogoView()
-            TextField("Username", text: $username)
+            TextField("Email", text: $viewModel.email)
                 .padding(10)
                 .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .modifier(WLTextFieldModifier())
             
-            SecureField("Password", text: $password)
+            SecureField("Password", text: $viewModel.password)
                 .padding(10)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .modifier(WLTextFieldModifier())
+            
             
             Button {
                 print("show forget password")
@@ -30,13 +30,13 @@ struct LoginView: View {
                 Text("Forgot Password?")
                     .font(.footnote)
                     .fontWeight(.semibold)
-//                    .padding(.top)
+                    .padding(.top)
                     .padding(.trailing, 28)
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             
             Button {
-                print("login")
+            Task { try await viewModel.signIn() }
             } label: {
                 Text("Log In")
                     .font(.subheadline)
@@ -48,7 +48,6 @@ struct LoginView: View {
             }
             .padding(.vertical)
             .cornerRadius(5)
-            .disabled(username.isEmpty || password.isEmpty)
             
             
             VStack {
@@ -80,20 +79,29 @@ struct LoginView: View {
             .foregroundColor(.black)
             
             Spacer()
-                    
+              
+            NavigationLink{
+                SignUpview()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
+                HStack(spacing:3){
+                    Text("Dont have an account? ")
+                    Text("Sign Up")
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                }
+                .font(.footnote)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .padding(0)
+            }
 
         }
         .padding()
-        
      
-        
     }
-    
-    
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+struct LoginView_Previews1: PreviewProvider{
+    static var previews: some View{
+            LoginView()
+        }
     }
-}

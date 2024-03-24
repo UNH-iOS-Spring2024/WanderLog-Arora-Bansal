@@ -20,7 +20,7 @@ struct FilledButtonStyleView: ButtonStyle {
             .background(backgroundColor.opacity(configuration.isPressed ? pressedOpacity : 1))
             .foregroundColor(foregroundColor)
             .cornerRadius(10)
-           // .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            // .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .frame(width: 360, height: 44)
             .fontWeight(.semibold)
             .font(.subheadline)

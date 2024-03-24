@@ -7,17 +7,26 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    var body: some View {
-        VStack{
-            Spacer()
-            NavBarUI()
-        }
-        .preferredColorScheme(.dark)
-    }
+    @StateObject var viewModel = ContentViewModel()
+    @StateObject var registrationViewModel = RegistrationViewModel()
     
+    var body: some View {
+        Group {
+            if $viewModel.userSession == nil {
+                LoginView()
+                    .environmentObject(registrationViewModel)
+            } else if let currentUser = viewModel.currentUser {
+                MainTabView()
+            }
+        }
+    }
 }
 
-#Preview {
-    ContentView()
-}
+struct ContentView_Previews1: PreviewProvider{
+    static var previews: some View{
+           ContentView()
+        }
+    }
+
