@@ -11,7 +11,7 @@ struct MainTabView: View {
     
     
     var body: some View {
-        Text("Fuck You")
+        Text("Trial")
     }
 }
     struct MainTabView_Previews: PreviewProvider {
