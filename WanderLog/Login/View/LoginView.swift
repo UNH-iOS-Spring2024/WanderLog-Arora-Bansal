@@ -61,34 +61,7 @@ struct LoginView: View {
                     })
                     .buttonStyle(.borderedProminent)
                     .padding()
-                    HStack {
-                        Rectangle()
-                            .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-                        
-                        Text("OR")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                        
-                        
-                        Rectangle()
-                            .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-                    }
-                    .foregroundColor(.gray)
                     
-                    HStack {
-                        Image(systemName: "apple.logo")
-                            .resizable()
-                            .frame(width: 14, height: 14)
-
-                        
-                        Text("Continue with Apple")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.black)
-                    }
-                    .padding(.top, 8)
-                    Spacer()
-                        .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                     HStack(spacing:3){
                         Text("Don't have an account yet?")
                         NavigationLink {
