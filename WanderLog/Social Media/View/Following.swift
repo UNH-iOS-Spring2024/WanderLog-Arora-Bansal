@@ -81,6 +81,10 @@ struct Following: View {
         }
     }
     
+    func countFollowing(){
+        
+    }
+    
     
     
     

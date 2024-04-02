@@ -82,8 +82,9 @@ struct Followers: View {
     }
     
     
-    
-    
+    func countFollowers() {
+        
+    }
     
 }
 
