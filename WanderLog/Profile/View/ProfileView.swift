@@ -184,7 +184,9 @@ struct ProfileView: View {
     }
     func checkUser(){
         if let currentUser = UserManager.shared.currentUser{
+            print("from profile view\n \(self.selfProfile)")
             if user.id == currentUser.id{
+                
                 selfProfile = true
                 user.bio = currentUser.bio
                 user.fullname = currentUser.fullname

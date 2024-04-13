@@ -13,6 +13,8 @@ import Firebase
 struct HomeView: View {
     @State var posts = [ImageData]()
     @State var following = [String]()
+    @State var userID = UserDefaults.standard.string(forKey: "UserID")
+    @State var x = false
     var body: some View {
         VStack{
             HStack{
@@ -35,7 +37,7 @@ struct HomeView: View {
                     .bold()
                     .italic()
                     .frame(maxWidth: .infinity, alignment: .leading)
-                if (posts.count == 0){
+                if (x){
                     VStack{
                         Image(systemName: "person.2.slash")
                             .resizable()
@@ -56,71 +58,68 @@ struct HomeView: View {
             }
         }
     }
+    func getUser(){
+        print("yes 1")
+        let db = Firestore.firestore()
+        var userID = UserDefaults.standard.string(forKey: "UserID")
+        db.collection("users").document(userID ?? "qwertyui").getDocument{ snapshot, err in
+            if let user = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
+                UserManager.shared.updateUser(id: user.id, username: user.username, email: user.email,  bio: user.bio, fullname: user.fullname)
+            }
+        }
+    }
     func getFollowing(){
         let db = Firestore.firestore()
         self.following=[]
-        if let currentUser = UserManager.shared.currentUser{
-            db.collection("connections").whereField("userID1", isEqualTo: currentUser.id).getDocuments(){(QuerySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                }
-                else {
-                    for document in QuerySnapshot!.documents{
-                        if let connection = Connections (id:document.documentID, data: document.data()){
-                            following.append(connection.userID2)
-                        }
-                    }
-                    if following.count != 0{
-                        retrieveImages()
-                    }
-                    
-                }
+        db.collection("connections").whereField("userID1", isEqualTo: userID).getDocuments(){(QuerySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
             }
-            
+            else {
+                for document in QuerySnapshot!.documents{
+                    if let connection = Connections (id:document.documentID, data: document.data()){
+                        following.append(connection.userID2)
+                    }
+                }
+                if following.count != 0{
+                    retrieveImages()
+                }
+                
+            }
         }
-        else{
-            print("Not logged in")
-        }
-        
     }
     
     func retrieveImages(){
         posts = []
-        var username1 = ""
         let db = Firestore.firestore()
         let firestoreRef = Storage.storage().reference()
-        if UserManager.shared.currentUser != nil{
-            db.collection("posts").whereField("userID", in: following).getDocuments(){(QuerySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                }
-                else {
-                    for document in QuerySnapshot!.documents{
-                        if let post = Posts(id:document.documentID, data: document.data()){
-                            db.collection("users").document(post.userID).getDocument { snapshot, err in
-                                if let user = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
-                                    let path = post.imageUrl
-                                    let fileRef = firestoreRef.child(path)
-                                    fileRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
-                                        if error ==  nil && data != nil{
-                                            if let i = UIImage(data: data!){
-                                                DispatchQueue.main.async{
-                                                    posts.append((ImageData(id:post.id,d:["caption":post.content, "image": i, "username":user.username, "likes":post.likes, "comments":post.comments ]) ?? ImageData(id: "", d: ["caption" : "","image" : UIImage(),"username":""]))!)
-                                                   
-                                                }
+        db.collection("posts").whereField("userID", in: following).getDocuments(){(QuerySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            }
+            else {
+                for document in QuerySnapshot!.documents{
+                    if let post = Posts(id:document.documentID, data: document.data()){
+                        db.collection("users").document(post.userID).getDocument { snapshot, err in
+                            if let user = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
+                                let path = post.imageUrl
+                                let fileRef = firestoreRef.child(path)
+                                fileRef.getData(maxSize: 5 * 1024 * 1024) { data, error in
+                                    if error ==  nil && data != nil{
+                                        if let i = UIImage(data: data!){
+                                            DispatchQueue.main.async{
+                                                posts.append((ImageData(id:post.id,d:["caption":post.content, "image": i, "username":user.username, "likes":post.likes, "comments":post.comments ]) ?? ImageData(id: "", d: ["caption" : "","image" : UIImage(),"username":""]))!)
+                                               
                                             }
                                         }
                                     }
                                 }
                             }
-                            
                         }
+                        
                     }
                 }
             }
-        }
-        else{
-            print("Not logged in")
         }
     }
 

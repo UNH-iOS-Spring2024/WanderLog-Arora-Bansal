@@ -6,11 +6,28 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
+func getUser() -> User {
+    var user = User(id: "", data: ["fullname" : "",
+                                                 "username" : "",
+                                                 "password" : 0,
+                                                 "bio" : "",
+                                                 "email" : ""])!
+    let db = Firestore.firestore()
+    if let currentUser = UserManager.shared.currentUser{
+        db.collection("users").document(currentUser.id).getDocument { snapshot, err in
+            if let u = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
+                print("from mapview\n \(u.username)")
+                user = u
+            }
+        }
+    }
+    return user
+}
 struct ProfileMapView: View {
-    @State var user : User
+    @State var user : User = getUser()
     @State private var selfProfile = false
-    @State private var progress = 0.7
     @State private var showPhotos = false
     var body: some View {
         VStack{
@@ -24,19 +41,25 @@ struct ProfileMapView: View {
             Spacer()
         }
         .onAppear(){
+            print(user.id)
             checkUser()
         }
         
     }
     func checkUser(){
+        let db = Firestore.firestore()
         if let currentUser = UserManager.shared.currentUser{
-            if user.id == currentUser.id{
-                selfProfile = true
+            db.collection("users").document(currentUser.id).getDocument { snapshot, err in
+                if let u = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
+                    self.user = u
+                    
+                    selfProfile = true
+                }
             }
         }
     }
 }
 
-//#Preview {
-//    ProfileMapView()
-//}
+#Preview {
+    ProfileMapView()
+}

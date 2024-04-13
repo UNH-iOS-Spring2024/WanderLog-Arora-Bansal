@@ -14,6 +14,7 @@ struct NavBarUI: View {
                                                  "password" : 0,
                                                  "bio" : "",
                                                  "email" : ""])!
+    @State private var userID = UserDefaults.standard.string(forKey: "UserID")
     @State public var tabViewSelection : Int
 //    @State public var currentUser : User
     var body: some View {
@@ -42,16 +43,16 @@ struct NavBarUI: View {
         }
         .navigationBarHidden(true)
         .onAppear(){
+            print("hh")
             getUser()
         }
     }
     func getUser(){
         let db = Firestore.firestore()
-        if let currentUser = UserManager.shared.currentUser{
-            db.collection("users").document(currentUser.id).getDocument { snapshot, err in
-                if let u = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
-                    user = u
-                }
+        db.collection("users").document(userID ?? "qwertyui").getDocument{ snapshot, err in
+            if let user = User(id: snapshot?.documentID ?? "", data: snapshot?.data() ?? ["username":""]){
+                UserManager.shared.updateUser(id: user.id, username: user.username, email: user.email,  bio: user.bio, fullname: user.fullname)
+                self.user = user
             }
         }
     }

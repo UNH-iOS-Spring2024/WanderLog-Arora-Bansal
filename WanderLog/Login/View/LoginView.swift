@@ -90,9 +90,10 @@ struct LoginView: View {
                     if let user = User(id:document.documentID, data: document.data()){
                         if user.password == password.hash{
                             print("Logged in")
-                            loginSuccess = true
+                            UserDefaults.standard.set(user.id, forKey: "UserID")
                             //update currentUser
                             UserManager.shared.updateUser(id: user.id, username: user.username, email: user.email,  bio: user.bio, fullname: user.fullname)
+                            loginSuccess = true
                         }
                         else{
                             print(password.hash)

@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
 struct ContentView: View {
+    @State private var userID = UserDefaults.standard.string(forKey: "UserID")
     var body: some View {
-        VStack{
-            LoginView()
+        NavigationStack{
+            if userID == nil{
+                LoginView()
+            }
+            else{
+                NavBarUI(tabViewSelection: 0)
+            }
         }
         .preferredColorScheme(.dark)
     }
 }
-
 #Preview {
     ContentView()
 }

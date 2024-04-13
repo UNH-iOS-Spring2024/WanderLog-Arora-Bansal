@@ -28,6 +28,7 @@ class UserManager {
     }
     // function that will reset the current User to nil upon logout.
     func logout() {
+        UserDefaults.standard.set(nil, forKey: "UserID")
         currentUser = nil
     }
 }
