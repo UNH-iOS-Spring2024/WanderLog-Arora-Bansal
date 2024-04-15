@@ -80,6 +80,28 @@ class LocationViewController: UIViewController, ObservableObject, CLLocationMana
             fatalError("Encountered an unknown authorization status.")
         }
     }
+    
+//    func reverseGeocodeLocation() {
+//        let geocoder = CLGeocoder()
+//        
+//        geocoder.reverseGeocodeLocation() { placemarks, error in
+//            if let error = error {
+//                completion(nil, error)
+//                return
+//            }
+//            
+//            if let placemark = placemarks?.first {
+//               
+//                let addressString = [placemark.thoroughfare, placemark.subThoroughfare, placemark.locality, placemark.administrativeArea, placemark.postalCode, placemark.country]
+//                    .compactMap { $0 }
+//                    .joined(separator: ", ")
+//                completion(addressString, nil)
+//            } else {
+//                completion("No address found", nil)
+//            }
+//        }
+//    }
+
 }
 
 extension CLLocation {
