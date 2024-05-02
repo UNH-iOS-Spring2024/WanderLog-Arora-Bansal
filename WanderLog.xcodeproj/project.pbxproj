@@ -72,9 +72,29 @@
 		6EB110D72B8D0950005ED8D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB110D62B8D0950005ED8D5 /* LoginView.swift */; };
 		6EBFA5DF2BCC9B8B00B59E79 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFA5DE2BCC9B8B00B59E79 /* LocationViewController.swift */; };
 		6EBFA5E12BCCD61600B59E79 /* InitialBucketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFA5E02BCCD61600B59E79 /* InitialBucketList.swift */; };
+		6EE908182BE32C550013D0BC /* WanderLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE908172BE32C550013D0BC /* WanderLogUITests.swift */; };
+		6EE9081A2BE32C550013D0BC /* WanderLogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE908192BE32C550013D0BC /* WanderLogUITestsLaunchTests.swift */; };
+		6EE908272BE32C830013D0BC /* WanderLogUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE908262BE32C830013D0BC /* WanderLogUnitTests.swift */; };
 		794DB04C2BC1BA3200CBDAFF /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DB04B2BC1BA3200CBDAFF /* PickerViewModel.swift */; };
 		794DB04E2BC1BAFC00CBDAFF /* CountryCityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DB04D2BC1BAFC00CBDAFF /* CountryCityPickerView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EE9081B2BE32C550013D0BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B076592B868025007E9BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B076602B868025007E9BB0;
+			remoteInfo = WanderLog;
+		};
+		6EE908282BE32C830013D0BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B076592B868025007E9BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29B076602B868025007E9BB0;
+			remoteInfo = WanderLog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		29099C3C2BAE3E99001A53F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +160,11 @@
 		6EB110D62B8D0950005ED8D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6EBFA5DE2BCC9B8B00B59E79 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = WanderLog/LocationViewController.swift; sourceTree = SOURCE_ROOT; };
 		6EBFA5E02BCCD61600B59E79 /* InitialBucketList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialBucketList.swift; path = ../InitialBucketList.swift; sourceTree = "<group>"; };
+		6EE908152BE32C550013D0BC /* WanderLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE908172BE32C550013D0BC /* WanderLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderLogUITests.swift; sourceTree = "<group>"; };
+		6EE908192BE32C550013D0BC /* WanderLogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderLogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6EE908242BE32C830013D0BC /* WanderLogUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderLogUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE908262BE32C830013D0BC /* WanderLogUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderLogUnitTests.swift; sourceTree = "<group>"; };
 		794DB04B2BC1BA3200CBDAFF /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
 		794DB04D2BC1BAFC00CBDAFF /* CountryCityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCityPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +182,20 @@
 				6E913F7A2BC6005B00CDAF87 /* FirebaseStorage in Frameworks */,
 				29524B732BB0B27600C4A28D /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				29524B772BB0B32000C4A28D /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE908122BE32C550013D0BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE908212BE32C830013D0BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +331,8 @@
 			children = (
 				29E7ADBA2BBB33FA0083AB12 /* GoogleService-Info.plist */,
 				29B076632B868025007E9BB0 /* WanderLog */,
+				6EE908162BE32C550013D0BC /* WanderLogUITests */,
+				6EE908252BE32C830013D0BC /* WanderLogUnitTests */,
 				29B076622B868025007E9BB0 /* Products */,
 				6EB110E42B8D0DA9005ED8D5 /* Frameworks */,
 			);
@@ -301,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				29B076612B868025007E9BB0 /* WanderLog.app */,
+				6EE908152BE32C550013D0BC /* WanderLogUITests.xctest */,
+				6EE908242BE32C830013D0BC /* WanderLogUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,6 +478,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6EE908162BE32C550013D0BC /* WanderLogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6EE908172BE32C550013D0BC /* WanderLogUITests.swift */,
+				6EE908192BE32C550013D0BC /* WanderLogUITestsLaunchTests.swift */,
+			);
+			path = WanderLogUITests;
+			sourceTree = "<group>";
+		};
+		6EE908252BE32C830013D0BC /* WanderLogUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EE908262BE32C830013D0BC /* WanderLogUnitTests.swift */,
+			);
+			path = WanderLogUnitTests;
+			sourceTree = "<group>";
+		};
 		794DB04A2BC1B9FF00CBDAFF /* Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +550,42 @@
 			productReference = 29B076612B868025007E9BB0 /* WanderLog.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6EE908142BE32C550013D0BC /* WanderLogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE9081F2BE32C550013D0BC /* Build configuration list for PBXNativeTarget "WanderLogUITests" */;
+			buildPhases = (
+				6EE908112BE32C550013D0BC /* Sources */,
+				6EE908122BE32C550013D0BC /* Frameworks */,
+				6EE908132BE32C550013D0BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EE9081C2BE32C550013D0BC /* PBXTargetDependency */,
+			);
+			name = WanderLogUITests;
+			productName = WanderLogUITests;
+			productReference = 6EE908152BE32C550013D0BC /* WanderLogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6EE908232BE32C830013D0BC /* WanderLogUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE9082A2BE32C830013D0BC /* Build configuration list for PBXNativeTarget "WanderLogUnitTests" */;
+			buildPhases = (
+				6EE908202BE32C830013D0BC /* Sources */,
+				6EE908212BE32C830013D0BC /* Frameworks */,
+				6EE908222BE32C830013D0BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EE908292BE32C830013D0BC /* PBXTargetDependency */,
+			);
+			name = WanderLogUnitTests;
+			productName = WanderLogUnitTests;
+			productReference = 6EE908242BE32C830013D0BC /* WanderLogUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -497,11 +593,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					29B076602B868025007E9BB0 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					6EE908142BE32C550013D0BC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 29B076602B868025007E9BB0;
+					};
+					6EE908232BE32C830013D0BC = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 29B076602B868025007E9BB0;
 					};
 				};
 			};
@@ -523,6 +627,8 @@
 			projectRoot = "";
 			targets = (
 				29B076602B868025007E9BB0 /* WanderLog */,
+				6EE908142BE32C550013D0BC /* WanderLogUITests */,
+				6EE908232BE32C830013D0BC /* WanderLogUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -536,6 +642,20 @@
 				29E7ADBB2BBB33FA0083AB12 /* GoogleService-Info.plist in Resources */,
 				6E5E61062BC4607000D6E4BB /* Assets.xcassets in Resources */,
 				29B0766C2B868026007E9BB0 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE908132BE32C550013D0BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE908222BE32C830013D0BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +724,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EE908112BE32C550013D0BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE9081A2BE32C550013D0BC /* WanderLogUITestsLaunchTests.swift in Sources */,
+				6EE908182BE32C550013D0BC /* WanderLogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EE908202BE32C830013D0BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE908272BE32C830013D0BC /* WanderLogUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EE9081C2BE32C550013D0BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B076602B868025007E9BB0 /* WanderLog */;
+			targetProxy = 6EE9081B2BE32C550013D0BC /* PBXContainerItemProxy */;
+		};
+		6EE908292BE32C830013D0BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29B076602B868025007E9BB0 /* WanderLog */;
+			targetProxy = 6EE908282BE32C830013D0BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		29B0766D2B868026007E9BB0 /* Debug */ = {
@@ -796,6 +946,80 @@
 			};
 			name = Release;
 		};
+		6EE9081D2BE32C550013D0BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K7DCNZ28TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tanushree.WanderLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WanderLog;
+			};
+			name = Debug;
+		};
+		6EE9081E2BE32C550013D0BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K7DCNZ28TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tanushree.WanderLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WanderLog;
+			};
+			name = Release;
+		};
+		6EE9082B2BE32C830013D0BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K7DCNZ28TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tanushree.WanderLogUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WanderLog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WanderLog";
+			};
+			name = Debug;
+		};
+		6EE9082C2BE32C830013D0BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K7DCNZ28TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Tanushree.WanderLogUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WanderLog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WanderLog";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,6 +1037,24 @@
 			buildConfigurations = (
 				29B076702B868026007E9BB0 /* Debug */,
 				29B076712B868026007E9BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE9081F2BE32C550013D0BC /* Build configuration list for PBXNativeTarget "WanderLogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE9081D2BE32C550013D0BC /* Debug */,
+				6EE9081E2BE32C550013D0BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE9082A2BE32C830013D0BC /* Build configuration list for PBXNativeTarget "WanderLogUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE9082B2BE32C830013D0BC /* Debug */,
+				6EE9082C2BE32C830013D0BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
